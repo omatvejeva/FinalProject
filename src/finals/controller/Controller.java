@@ -1,5 +1,10 @@
 package finals.controller;
 
-public class Controller {
-
+public class Controller 
+{
+	public void start()
+	{
+		
+	}
+	
 }
