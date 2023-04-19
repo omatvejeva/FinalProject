@@ -1,6 +1,7 @@
 package finals.controller;
 
 import finals.view.FinalFrame;
+import javax.swing.JOptionPane; 
 
 public class Controller 
 {
@@ -14,6 +15,10 @@ public class Controller
 	public void start()
 	{
 		
+	}
+	public void handleError(Exception error)
+	{
+		JOptionPane.showMessageDialog(frame, error.getMessage(), "Ooooops!", JOptionPane.ERROR_MESSAGE);
 	}
 	
 }

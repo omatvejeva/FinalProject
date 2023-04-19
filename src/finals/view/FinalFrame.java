@@ -26,16 +26,15 @@ public class FinalFrame extends JFrame
 		 setupFrame(); 
 	}
 	private void setupMenu()
-	{
-		JMenuItem info, draw; 
+	{ 
 		this.menuBar = new JMenuBar(); 
 		this.menu = new JMenu("Menu"); 
-		JMenuItem quitItem = new JMenuItem("Quit Application"); 
+		JMenuItem quitItem = new JMenuItem("Quit Application");  
+		
+		JMenuItem info = new JMenuItem("Information"); 
+		JMenuItem draw = new JMenuItem("Drawing"); 
 		
 		quitItem.addActionListener(select ->System.exit(0)); 
-		
-		info = new JMenuItem("Information"); 
-		draw = new JMenuItem("Drawing"); 
 		
 		menu.add(info); 
 		menu.add(draw); 
