@@ -23,7 +23,7 @@ public class FinalFrame extends JFrame
 	{
 		this.setContentPane(panel);
 		this.setTitle("Final Project (change later)");
-		this.setSize(800,600);
+		this.setSize(1024,800);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE); 
 		this.setResizable(false); 
 	

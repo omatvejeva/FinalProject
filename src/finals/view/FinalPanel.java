@@ -31,9 +31,10 @@ public class FinalPanel extends JPanel
 	
 	private void setupPanel()
 	{
-		this.setBackground(Color.GREEN);
+		Color greenish = new Color(160,230,142); 
+		this.setBackground(greenish);
 	}
-
+           
 	private void setupLayout()
 	{
 		
