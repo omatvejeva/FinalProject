@@ -2,7 +2,7 @@ package finals.view;
 
 import finals.controller.Controller;
 import javax.swing.JFrame; 
-import java.awt.Color; 
+
 
 public class FinalFrame extends JFrame
 {
