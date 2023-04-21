@@ -19,6 +19,8 @@ public class ArtPanel extends JPanel
 	private Color currentColor; 
 	private BufferedImage canvasImage; 
 	
+	private int previousX; 
+	private int previousY; 
 	
 	public ArtPanel(Controller app)
 	{
@@ -39,5 +41,11 @@ public class ArtPanel extends JPanel
 	{
 		super.paintComponent(graphics);
 		graphics.drawImage(canvasImage, 0, 0, null);
+	}
 	
+	public void resetPoint()
+	{
+		previousX = Integer.MIN_VALUE; 
+		previousY = Integer.MIN_VALUE; 
+	}
 }
