@@ -1,5 +1,6 @@
 package finals.view;
 
+
 import finals.controller.Controller;
 
 
@@ -9,7 +10,7 @@ import java.awt.image.BufferedImage;
 import javax.swing.*; 
 
 
-public class ArtPanel extends JPanel 
+public class CanvasPanel extends JPanel 
 {
 	private Controller app; 
 	private SpringLayout layout; 
@@ -22,7 +23,7 @@ public class ArtPanel extends JPanel
 	private int previousX; 
 	private int previousY; 
 	
-	public ArtPanel(Controller app)
+	public CanvasPanel(Controller app)
 	{
 		super(); 
 		this.app = app; 
