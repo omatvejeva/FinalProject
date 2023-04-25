@@ -188,7 +188,10 @@ public class ArtPanel extends JPanel
 			
 	}
 		
-
+	public void drawOnCanvas()
+	{
+		
+	}
 
 	private void setupLayout()
 	{ 
