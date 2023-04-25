@@ -188,8 +188,24 @@ public class ArtPanel extends JPanel
 			
 	}
 		
-	public void drawOnCanvas()
+	public void drawOnCanvas(int xPosition, int yPosition, int width)
 	{
+		Graphics2D drawingGraphics = (Graphics2D)canvasImage.getGraphics(); 
+		drawingGraphics.setPaint(currentColor);
+		drawingGraphics.setStroke(new BasicStroke(width)); 
+		if(previousX == Integer.MIN_VALUE || previousY == Integer.MIN_VALUE)
+		{
+			drawingGraphics.drawLine(xPosition, yPosition, xPosition, yPosition);
+		}
+		else
+		{
+			drawingGraphics.drawLine(previousX, previousY, xPosition, yPosition);
+		}
+		this.previousX = xPosition; 
+		this.previousY = yPosition; 
+		
+		drawingGraphics.dispose();
+		repaint(); 
 		
 	}
 

@@ -38,7 +38,7 @@ public class FinalFrame extends JFrame
 		JMenuItem draw = new JMenuItem("Drawing"); 
 		
 		quitItem.addActionListener(select ->System.exit(0)); 
-		draw.addActionListener(select -> artPanel.drawOnCanvas());
+	//	draw.addActionListener(select -> artPanel.drawOnCanvas());
 //		info.addActionListener(select -> );
 		
 		menu.add(info); 
