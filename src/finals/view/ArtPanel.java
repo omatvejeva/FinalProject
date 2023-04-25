@@ -92,8 +92,9 @@ public class ArtPanel extends JPanel
 	}
 	private void setupPanel()
 	{
+		Color greenish = new Color(160,230,142); 
 		this.setLayout(layout); 
-		this.setBackground(Color.GRAY); 
+		this.setBackground(greenish); 
 		menuPanel.add(demoLabel); 
 		menuPanel.add(saveButton); 
 		menuPanel.add(loadButton); 
@@ -195,7 +196,7 @@ public class ArtPanel extends JPanel
 		drawingGraphics.setStroke(new BasicStroke(width)); 
 		if(previousX == Integer.MIN_VALUE || previousY == Integer.MIN_VALUE)
 		{
-			drawingGraphics.drawLine(xPosition, yPosition, xPosition, yPosition);
+			drawingGraphics.drawLine(xPosition, yPosition, xPosition + 30, yPosition +30);
 		}
 		else
 		{
@@ -214,7 +215,7 @@ public class ArtPanel extends JPanel
 		layout.putConstraint(SpringLayout.NORTH, canvas, 34, SpringLayout.NORTH, this);
 		layout.putConstraint(SpringLayout.EAST, canvas, -50, SpringLayout.EAST, this);
 		layout.putConstraint(SpringLayout.SOUTH, canvas, -34, SpringLayout.SOUTH, this);
-		layout.putConstraint(SpringLayout.WEST, canvas, -750, SpringLayout.EAST, this);
+		layout.putConstraint(SpringLayout.WEST, canvas, -650, SpringLayout.EAST, this);
 		layout.putConstraint(SpringLayout.SOUTH, menuPanel, 86, SpringLayout.SOUTH, colorPanel);
 		layout.putConstraint(SpringLayout.NORTH, colorPanel, 17, SpringLayout.NORTH, this);
 	

@@ -38,7 +38,7 @@ public class FinalFrame extends JFrame
 		JMenuItem draw = new JMenuItem("Drawing"); 
 		
 		quitItem.addActionListener(select ->System.exit(0)); 
-	//	draw.addActionListener(select -> artPanel.drawOnCanvas());
+//		draw.addActionListener(select -> FinalFrame.replaceScreen(artPanel));
 //		info.addActionListener(select -> );
 		
 		menu.add(info); 
@@ -54,7 +54,7 @@ public class FinalFrame extends JFrame
 	private void setupFrame()
 	{
 		this.setJMenuBar(menuBar);
-		this.setContentPane(panel);
+		this.setContentPane(artPanel);
 		this.setTitle("Final Project (change later)");
 		this.setSize(1024,800);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE); 
