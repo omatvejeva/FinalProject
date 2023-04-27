@@ -14,6 +14,9 @@ import javax.swing.JMenuItem;
 
 public class FinalFrame extends JFrame
 {
+	public static final String ART_SCREEN = "art"; 
+	public static final String INFO_SCREEN = "info"; 
+	
 	private Controller app; 
 	private FinalPanel panel; 
 	private JPanel panelCards; 
@@ -44,8 +47,8 @@ public class FinalFrame extends JFrame
 		JMenuItem draw = new JMenuItem("Drawing"); 
 		
 		quitItem.addActionListener(select ->System.exit(0)); 
-		draw.addActionListener(select -> replaceScreen( "Art"));
-//		info.addActionListener(select -> );
+	//	draw.addActionListener(select -> replaceScreen( ART_SCREEN));
+		//info.addActionListener(select -> replaceScreen(INFO_SCREEN));
 		
 		menu.add(info); 
 		menu.add(draw); 
@@ -64,11 +67,11 @@ public class FinalFrame extends JFrame
 	
 	private void setupFrame()
 	{
-	//	panelCards.add(panel, "Panel"); 
-	//	panelCards.add(artPanel, "Art"); 
+	//	panelCards.add(panel, INFO_SCREEN); 
+	//	panelCards.add(artPanel, ART_SCREEN); 
 	//	this.add(panelCards); 
 		this.setJMenuBar(menuBar);
-		this.setContentPane(panel);
+		this.setContentPane(artPanel);
 		this.setTitle("Final Project (change later)");
 		this.setSize(1024,800);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE); 
