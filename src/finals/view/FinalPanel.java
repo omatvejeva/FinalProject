@@ -86,6 +86,12 @@ public class FinalPanel extends JPanel
 	
 	private void setupListeners()
 	{
+		cactiButton.addActionListener(click -> updateScreen(0));
+		succulentsButton.addActionListener(click -> updateScreen(1));
 		
+	}
+	private void updateScreen(int number)
+	{
+		displayArea.setText(app.getInfo(number));
 	}
 }
