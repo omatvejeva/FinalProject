@@ -47,8 +47,8 @@ public class FinalFrame extends JFrame
 		JMenuItem draw = new JMenuItem("Drawing"); 
 		
 		quitItem.addActionListener(select ->System.exit(0)); 
-	//	draw.addActionListener(select -> replaceScreen( ART_SCREEN));
-		//info.addActionListener(select -> replaceScreen(INFO_SCREEN));
+		draw.addActionListener(select -> replaceScreen( ART_SCREEN));
+		info.addActionListener(select -> replaceScreen(INFO_SCREEN));
 		
 		menu.add(info); 
 		menu.add(draw); 
@@ -61,17 +61,17 @@ public class FinalFrame extends JFrame
 	public void replaceScreen(String screen)
 	{
 		
-	//	((CardLayout) panelCards.getLayout()).show(panelCards, screen);
+		((CardLayout) panelCards.getLayout()).show(panelCards, screen);
 	}
 	
 	
 	private void setupFrame()
 	{
-	//	panelCards.add(panel, INFO_SCREEN); 
-	//	panelCards.add(artPanel, ART_SCREEN); 
-	//	this.add(panelCards); 
+		panelCards.add(panel, INFO_SCREEN); 
+		panelCards.add(artPanel, ART_SCREEN); 
+		this.add(panelCards); 
 		this.setJMenuBar(menuBar);
-		this.setContentPane(artPanel);
+		
 		this.setTitle("Final Project (change later)");
 		this.setSize(1024,800);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE); 
