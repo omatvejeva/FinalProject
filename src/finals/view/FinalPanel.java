@@ -21,9 +21,12 @@ public class FinalPanel extends JPanel
 	
 	private JPanel buttonPanel;
 	private JScrollPane dataPane; 
-	private JTextArea displayArea; 
+	private JTextArea displayArea;
+	private JPanel displayPanel; 
+	
 	private JButton cactiButton; 
 	private JPanel cactiPanel; 
+	
 	private JButton monkeyButton; 
 	private JButton powderButton; 
 	private JButton pearButton; 
@@ -31,6 +34,7 @@ public class FinalPanel extends JPanel
 	
 	private JButton succulentsButton; 
 	private JPanel succulentsPanel; 
+	
 	private JButton stringButton; 
 	private JButton tomButton; 
 	private JButton cuspidataButton; 
@@ -51,6 +55,7 @@ public class FinalPanel extends JPanel
 		this.buttonPanel = new JPanel (new GridLayout(0,1)); 
 		this.displayArea = new JTextArea(); 
 		this.dataPane = new JScrollPane(); 
+		this.displayPanel = new JPanel(new GridLayout(0,1)); 
 		
 		this.cactiButton = new JButton("Cacti"); 
 		this.cactiPanel = new JPanel(new GridLayout(0,2)); 
@@ -91,7 +96,13 @@ public class FinalPanel extends JPanel
 		succulentsPanel.add(cuspidataButton); 
 		succulentsPanel.add(lilyButton); 
 		
+		displayPanel.add(displayArea); 
+		displayArea.setWrapStyleWord(true); 
+		displayArea.setLineWrap(true);
 		dataPane.setViewportView(displayArea); 
+		dataPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED); 
+		dataPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER); 
+		
 		
 		this.add(titleLabel); 
 		this.add(buttonPanel); 

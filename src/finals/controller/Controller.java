@@ -26,7 +26,12 @@ public class Controller
 	 */
 	public Controller()
 	{
-		this.myCactus = new Cacti("I'm a Cactus!"); 
+		this.myCactus = new Cacti("a succulent plant with a thick, "
+				+ "fleshy stem that typically bears spines, lacks "
+				+ "leaves, and has brilliantly colored flowers. "
+				+ "Cacti are native to arid regions of the New World "
+				+ "and are cultivated elsewhere, especially as "
+				+ "houseplants."); 
 		this.mySucculent = new Succulents();
 		this.frame = new FinalFrame(this); 
 	}

@@ -5,7 +5,8 @@ public class Succulents
 	private String description; 
 	public Succulents()
 	{
-		description = "I'm a succulent!"; 
+		description = "succulent, any plant with thick fleshy "
+				+ "tissues adapted to water storage"; 
 	}
 
 	public void setDescription(String description)
