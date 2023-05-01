@@ -3,6 +3,10 @@ package finals.controller;
 import finals.model.Cacti;
 import finals.model.Succulents;
 import finals.view.FinalFrame;
+import javax.swing.JOptionPane;
+
+import finals.controller.IOController;
+
 import javax.swing.JOptionPane; 
 
 /*Controller for the final project 
@@ -50,6 +54,19 @@ public class Controller
 		{
 			return mySucculent.getDescription(); 
 		}
+	}
+	
+	
+	public void save(String path, String contents)
+	{
+		IOController.saveTextToFile(this, path, contents);
+	}
+	
+	public String load(String path)
+	{
+		String results = IOController.loadTextFromFile(this, path); 
+		
+		return results; 
 	}
 	
 }
