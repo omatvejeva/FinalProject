@@ -63,7 +63,7 @@ public class FinalPanel extends JPanel
 		this.succulentsPanel = new JPanel(new GridLayout(0,2)); 
 		this.stringButton = new JButton("String of pearls"); 
 		this.tomButton = new JButton("Tom Thumb"); 
-		this.cuspidataButton = new JButton("Cuspidata"); 
+		this.cuspidataButton = new JButton("Star Window"); 
 		this.lilyButton = new JButton("Aeonium Lily Pad"); 
 		
 		setupPanel(); 
@@ -120,6 +120,11 @@ public class FinalPanel extends JPanel
 		powderButton.addActionListener(click -> updateDisplay("powder"));
 		capButton.addActionListener(click -> updateDisplay("cap"));
 		pearButton.addActionListener(click -> updateDisplay("pear"));
+		
+		stringButton.addActionListener(click -> updateDisplay("string"));
+		tomButton.addActionListener(click -> updateDisplay("tom"));
+		cuspidataButton.addActionListener(click -> updateDisplay("star"));
+		lilyButton.addActionListener(click -> updateDisplay("lily"));
 		
 		
 	}
