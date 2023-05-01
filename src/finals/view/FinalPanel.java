@@ -118,7 +118,8 @@ public class FinalPanel extends JPanel
 		
 		monkeyButton.addActionListener(click -> updateDisplay("monkey"));
 		powderButton.addActionListener(click -> updateDisplay("powder"));
-		
+		capButton.addActionListener(click -> updateDisplay("cap"));
+		pearButton.addActionListener(click -> updateDisplay("pear"));
 		
 		
 	}
