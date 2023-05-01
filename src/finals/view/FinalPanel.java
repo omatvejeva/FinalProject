@@ -24,8 +24,17 @@ public class FinalPanel extends JPanel
 	private JTextArea displayArea; 
 	private JButton cactiButton; 
 	private JPanel cactiPanel; 
+	private JButton monkeyButton; 
+	private JButton powderButton; 
+	private JButton pearButton; 
+	private JButton capButton; 
+	
 	private JButton succulentsButton; 
 	private JPanel succulentsPanel; 
+	private JButton stringButton; 
+	private JButton tomButton; 
+	private JButton cuspidataButton; 
+	private JButton lilyButton; 
 	
 	private JLabel titleLabel; 
 	
@@ -42,11 +51,20 @@ public class FinalPanel extends JPanel
 		this.buttonPanel = new JPanel (new GridLayout(0,1)); 
 		this.displayArea = new JTextArea(); 
 		this.dataPane = new JScrollPane(); 
+		
 		this.cactiButton = new JButton("Cacti"); 
 		this.cactiPanel = new JPanel(new GridLayout(0,2)); 
+		this.monkeyButton = new JButton("Monkey's Tail"); 
+		this.powderButton = new JButton("powder puff"); 
+		this.pearButton = new JButton("Prickly Pear"); 
+		this.capButton = new JButton("Bishop's Cap"); 
+		
 		this.succulentsButton = new JButton("Succulents"); 
 		this.succulentsPanel = new JPanel(new GridLayout(0,2)); 
-	
+		this.stringButton = new JButton("String of pearls"); 
+		this.tomButton = new JButton("Tom Thumb"); 
+		this.cuspidataButton = new JButton("Cuspidata"); 
+		this.lilyButton = new JButton("Aeonium Lily Pad"); 
 		
 		setupPanel(); 
 		setupLayout(); 
@@ -61,8 +79,17 @@ public class FinalPanel extends JPanel
 		
 		buttonPanel.add(cactiButton); 
 		buttonPanel.add(cactiPanel); 
+		cactiPanel.add(monkeyButton); 
+		cactiPanel.add(powderButton); 
+		cactiPanel.add(pearButton); 
+		cactiPanel.add(capButton); 
+		
 		buttonPanel.add(succulentsButton); 
 		buttonPanel.add(succulentsPanel); 
+		succulentsPanel.add(stringButton); 
+		succulentsPanel.add(tomButton); 	
+		succulentsPanel.add(cuspidataButton); 
+		succulentsPanel.add(lilyButton); 
 		
 		dataPane.setViewportView(displayArea); 
 		
