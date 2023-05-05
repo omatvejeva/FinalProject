@@ -60,7 +60,7 @@ public class FinalPanel extends JPanel
 		this.cactiButton = new JButton("Cacti"); 
 		this.cactiPanel = new JPanel(new GridLayout(0,2)); 
 		this.monkeyButton = new JButton("Monkey's Tail"); 
-		this.powderButton = new JButton("powder puff"); 
+		this.powderButton = new JButton("Powder puff"); 
 		this.pearButton = new JButton("Prickly Pear"); 
 		this.capButton = new JButton("Bishop's Cap"); 
 		
