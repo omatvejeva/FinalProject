@@ -18,11 +18,13 @@ public class FinalFrame extends JFrame
 	public static final String INFO_SCREEN = "info"; 
 	public static final String PHOTO_SCREEN = "photo"; 
 	
+	
 	private Controller app; 
 	private FinalPanel panel; 
 	private JPanel panelCards; 
 	private ArtPanel artPanel; 
 	private PhotoPanel photoPanel; 
+
 	private JMenuBar menuBar; 
 	private JMenu menu; 
 	
@@ -35,6 +37,7 @@ public class FinalFrame extends JFrame
 		this.menuBar = new JMenuBar(); 
 		this.artPanel = new ArtPanel(this.app); 
 		this.photoPanel = new PhotoPanel(this.app); 
+		
 		this.panelCards = new JPanel(new CardLayout()); 
 		
 		 setupMenu(); 
@@ -49,15 +52,18 @@ public class FinalFrame extends JFrame
 		JMenuItem info = new JMenuItem("Information"); 
 		JMenuItem draw = new JMenuItem("Drawing"); 
 		JMenuItem photo = new JMenuItem("Photos"); 
+		 
 		
 		quitItem.addActionListener(select ->System.exit(0)); 
 		draw.addActionListener(select -> replaceScreen( ART_SCREEN));
 		info.addActionListener(select -> replaceScreen(INFO_SCREEN));
 		photo.addActionListener(select -> replaceScreen(PHOTO_SCREEN));
+	 
 		
 		menu.add(info); 
 		menu.add(draw); 
 		menu.add(photo); 
+	 
 		menu.add(quitItem); 
 		
 		menuBar.add(menu); 
@@ -76,6 +82,7 @@ public class FinalFrame extends JFrame
 		panelCards.add(panel, INFO_SCREEN); 
 		panelCards.add(artPanel, ART_SCREEN); 
 		panelCards.add(photoPanel, PHOTO_SCREEN); 
+		
 		this.add(panelCards); 
 		this.setJMenuBar(menuBar);
 		
