@@ -12,6 +12,9 @@ import java.time.LocalDateTime;
 
 public class IOController 
 {
+	/*
+	 * method scans the .txt files 
+	 */
 	public static void saveTextToFile(Controller app, String path, String text)
 	{
 		String filename = buildDataBasedFilename(path); 
@@ -30,7 +33,9 @@ public class IOController
 			app.handleError(error); 
 		}
 	}
-	
+	/*
+	 * method gets the .txt files 
+	 */
 	public static String buildDataBasedFilename(String path)
 	{
 		String filename = path; 
@@ -54,7 +59,9 @@ public class IOController
 		
 		return filename; 
 	}
-	
+	 /*
+	  * method loads the .txt files, stolen form dataStuctures project 
+	  */
 	public static String loadTextFromFile(Controller app, String pathAndFilename)
 	{
 		String fileContents = " "; 

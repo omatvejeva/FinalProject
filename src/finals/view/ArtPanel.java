@@ -11,9 +11,12 @@ import java.awt.image.BufferedImage;
 
 import javax.swing.*; 
 
-
+// art panel class 
 public class ArtPanel extends JPanel 
 {
+	/*
+	 * instance variables 
+	 */
 	private Controller app; 
 	private SpringLayout layout; 
 	private JPanel buttonPanel; 
@@ -40,6 +43,9 @@ public class ArtPanel extends JPanel
 	private int previousX; 
 	private int previousY; 
 	
+	/*
+	 * initalizes variables /  panel 
+	 */
 	public ArtPanel(Controller app)
 	{
 		super(); 
@@ -78,6 +84,9 @@ public class ArtPanel extends JPanel
 		setupListeners(); 
 	}
 	
+	/*
+	 * overriden method 
+	 */
 	@Override 
 	protected void paintComponent(Graphics graphics)
 	{
@@ -85,11 +94,17 @@ public class ArtPanel extends JPanel
 		graphics.drawImage(canvasImage, 0, 0, null);
 	}
 	
+	/*
+	 * tracks location 
+	 */
 	public void resetPoint()
 	{
 		previousX = Integer.MIN_VALUE; 
 		previousY = Integer.MIN_VALUE; 
 	}
+	/*
+	 * method sets up how the panel looks 
+	 */
 	private void setupPanel()
 	{
 		Color greenish = new Color(160,230,142); 
@@ -115,7 +130,9 @@ public class ArtPanel extends JPanel
 		this.setPreferredSize(new Dimension(1200,900));
 	}
 	
-	
+	/*
+	 * method that works with colour 
+	 */
 	public void updateColor()
 	{
 		Color userColor = JColorChooser.showDialog(this, "Pick your color!", Color.WHITE);

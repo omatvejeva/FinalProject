@@ -13,6 +13,9 @@ import javax.swing.JOptionPane;
  * Author Olivia Matvejeva 
  */
 
+/*
+ * controller class 
+ */
 public class Controller 
 {
 	/*
@@ -43,7 +46,7 @@ public class Controller
 		
 	}
 	/*
-	 * handles errors and is a contructor 
+	 * handles errors and is a construct 
 	 */
 	public void handleError(Exception error)
 	{
@@ -61,12 +64,16 @@ public class Controller
 		}
 	}
 	
-	
+	/*
+	 *  save method, saves images from the art / canvas panels 
+	 */
 	public void save(String path, String contents)
 	{
 		IOController.saveTextToFile(this, path, contents);
 	}
-	
+	/*
+	 * loads images from computer to show on art / canvas panels 
+	 */
 	public String load(String path)
 	{
 		String results = IOController.loadTextFromFile(this, path); 
