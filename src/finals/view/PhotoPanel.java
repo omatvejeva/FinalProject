@@ -18,7 +18,7 @@ public class PhotoPanel extends JPanel
 	private Controller app; 
 	DefaultListModel<String> model = new DefaultListModel<String>(); 
 	JList<String> list = new JList<String>(model); 
-	//JPanel photoPanel = new JPanel(); 
+
 	JLabel labelForImages = new JLabel(); 
 	HashMap<String, String> data = new HashMap<String, String>(); 
 	
@@ -49,7 +49,6 @@ public class PhotoPanel extends JPanel
 			model.addElement(String.valueOf(x));
 		}
 		this.add(new JScrollPane(list)); 
-	//	labelForImages.setText("I exist!!");
 		this.add(labelForImages); 
 		
 		
@@ -71,7 +70,7 @@ public class PhotoPanel extends JPanel
 				}
 				catch (NullPointerException error)
 				{
-					labelForImages.setText("as;ldjhf"); 
+					labelForImages.setText("no image?"); 
 				}
 				
 				
