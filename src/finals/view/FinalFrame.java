@@ -14,6 +14,9 @@ import javax.swing.JMenuItem;
 
 public class FinalFrame extends JFrame
 {
+	/*\
+	 * instant variables 
+	 */
 	public static final String ART_SCREEN = "art"; 
 	public static final String INFO_SCREEN = "info"; 
 	public static final String PHOTO_SCREEN = "photo"; 
@@ -28,6 +31,9 @@ public class FinalFrame extends JFrame
 	private JMenuBar menuBar; 
 	private JMenu menu; 
 	
+	/*
+	 * constructor for final frame 
+	 */
 	public FinalFrame(Controller app)
 	{
 		super(); 
@@ -43,6 +49,9 @@ public class FinalFrame extends JFrame
 		 setupMenu(); 
 		 setupFrame(); 
 	}
+	/*
+	 * method that sets up the menu 
+	 */
 	private void setupMenu()
 	{ 
 		this.menuBar = new JMenuBar(); 
@@ -70,13 +79,18 @@ public class FinalFrame extends JFrame
 		
 		
 	}
+	/*
+	 * method that replaces the screens with card layout 
+	 */
 	public void replaceScreen(String screen)
 	{
 		
 		((CardLayout) panelCards.getLayout()).show(panelCards, screen);
 	}
 	
-	
+	/*
+	 * method that sets up the Frame 
+	 */
 	private void setupFrame()
 	{
 		panelCards.add(panel, INFO_SCREEN); 

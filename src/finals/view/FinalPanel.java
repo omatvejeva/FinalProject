@@ -15,6 +15,9 @@ import java.awt.Color;
 
 public class FinalPanel extends JPanel
 {
+	/*
+	 * instant variables 
+	 */
 	private Controller app; 
 	
 	private SpringLayout layout; 
@@ -42,7 +45,9 @@ public class FinalPanel extends JPanel
 	
 	private JLabel titleLabel; 
 	
-	
+	/*
+	 * constructor for Final panel 
+	 */
 	public FinalPanel(Controller app)
 	{
 		super(); 
@@ -75,7 +80,9 @@ public class FinalPanel extends JPanel
 		setupLayout(); 
 		setupListeners(); 
 	}
-	
+	/*
+	 * method that sets up the panel as well as all the variables 
+	 */
 	private void setupPanel()
 	{
 		Color greenish = new Color(160,230,142); 
@@ -108,7 +115,9 @@ public class FinalPanel extends JPanel
 		this.add(buttonPanel); 
 		this.add(dataPane); 
 	}
-           
+           /*
+            * method that sets up how the panel looks 
+            */
 	private void setupLayout()
 	{
 		layout.putConstraint(SpringLayout.WEST, buttonPanel, 25, SpringLayout.WEST, this); 
@@ -121,7 +130,9 @@ public class FinalPanel extends JPanel
 		layout.putConstraint(SpringLayout.EAST, dataPane, -25, SpringLayout.EAST, this);
 		layout.putConstraint(SpringLayout.WEST, dataPane, 300, SpringLayout.WEST, this); 
 	}
-	
+	/*
+	 * method that lets the variables know that they do 
+	 */
 	private void setupListeners()
 	{
 		cactiButton.addActionListener(click -> updateScreen(0));
@@ -139,11 +150,16 @@ public class FinalPanel extends JPanel
 		
 		
 	}
+	/*
+	 * updates the screen method 
+	 */
 	private void updateScreen(int number)
 	{
 		displayArea.setText(app.getInfo(number));
 	}
-	
+	/*
+	 * updates the display method 
+	 */
 	private void updateDisplay(String type)
 	{
 		String contents = type + ".txt"; 

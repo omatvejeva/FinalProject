@@ -12,7 +12,9 @@ import javax.swing.event.ListSelectionListener;
 
 public class PhotoPanel extends JPanel
 {
-	
+	/*
+	 * instant variables 
+	 */
 	private Controller app; 
 	DefaultListModel<String> model = new DefaultListModel<String>(); 
 	JList<String> list = new JList<String>(model); 
@@ -21,7 +23,9 @@ public class PhotoPanel extends JPanel
 	HashMap<String, String> data = new HashMap<String, String>(); 
 	
 	
-	
+	/*
+	 * constructor and uses hashMap to load images 
+	 */
 	public PhotoPanel(Controller app)
 	{
 		super(); 

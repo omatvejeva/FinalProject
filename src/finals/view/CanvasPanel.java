@@ -17,6 +17,9 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class CanvasPanel extends JPanel 
 {
+	/*
+	 * Instant variables 
+	 */
 	private Controller app; 
 	private SpringLayout layout; 
 	private JPanel buttonPanel; 
@@ -28,6 +31,9 @@ public class CanvasPanel extends JPanel
 	private int previousX; 
 	private int previousY; 
 	
+	/*
+	 * Constructor for canvas panel 
+	 */
 	public CanvasPanel(Controller app)
 	{
 		super(); 
@@ -41,6 +47,9 @@ public class CanvasPanel extends JPanel
 		
 	}
 	
+	/*
+	 * overridden method 
+	 */
 	@Override 
 	protected void paintComponent(Graphics graphics)
 	{
@@ -48,11 +57,17 @@ public class CanvasPanel extends JPanel
 		graphics.drawImage(canvasImage, 0, 0, null);
 	}
 	
+	/*
+	 * method for points 
+	 */
 	public void resetPoint()
 	{
 		previousX = Integer.MIN_VALUE; 
 		previousY = Integer.MIN_VALUE; 
 	}
+	/*
+	 * method that draws dots at last location 
+	 */
 	public void drawDot(int currentX, int currentY, int width)
 	{
 		Graphics2D currentGraphics = canvasImage.createGraphics(); 
@@ -63,6 +78,9 @@ public class CanvasPanel extends JPanel
 		repaint(); 
 	}
 	
+/*
+ * draws lines / method 
+ */
 	public void drawLine(int currentX, int currentY, int width)
 	{
 		Graphics2D currentGraphics = canvasImage.createGraphics(); 
@@ -82,7 +100,9 @@ public class CanvasPanel extends JPanel
 		previousY = currentY; 
 		repaint(); 
 	}
-	
+	/*
+	 * method that sets up the panel 
+	 */
 	private void setupPanel()
 	{
 		this.setPreferredSize(new Dimension(700, 1000));
@@ -91,13 +111,17 @@ public class CanvasPanel extends JPanel
 
 		this.currentColor = Color.BLACK; 
 	}
-	
+	/*
+	 *method that sets up the color, returns  a color  
+	 */
 	public void setColor(Color color)
 	{
 		this.currentColor = color;
 
 	}
-
+/*
+ * method that erases the canvas 
+ */
 	public void eraseCanvas()
 
 	{
@@ -107,7 +131,9 @@ public class CanvasPanel extends JPanel
 		repaint();
 
 	}
-
+/*
+ * method that saves an image to the computer 
+ */
 	public void saveImage()
 	{
 		try 
@@ -129,7 +155,9 @@ public class CanvasPanel extends JPanel
 			app.handleError(error);
 		}
 	}
-	
+	/*
+	 * method that loads an image off the computer 
+	 */
 	public void loadImage()
 	{
 		try
