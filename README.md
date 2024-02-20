@@ -1,4 +1,7 @@
 # FinalProject
-Final project for my CS 1410 class at CTEC. 
-It uses GUI to display the project 
-It includes hashmap and many other types of data stuctures 
+
+ This project is created as a capstone for CS 1410 at CTEC. 
+
+ This project demonstrates an understanding of GUI, MVC file structure, and IO file reading/saving. 
+ This project shows an understanding of Arraylists and Hashmaps data structures. 
+ This project shows an understanding and usage for inherent as well. 
